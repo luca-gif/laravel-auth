@@ -28,9 +28,12 @@
                 <a class="navbar-brand" href="{{ route('home') }}">
                     Torna alla Home pubblica
                 </a>
-                <a class="navbar-brand" href="{{ route('admin.posts.index') }}">
-                    Vai alla Index
-                </a>
+                @auth
+                    <a class="navbar-brand" href="{{ route('admin.posts.index') }}">
+                        Vai alla Index
+                    </a>
+
+                @endauth
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
