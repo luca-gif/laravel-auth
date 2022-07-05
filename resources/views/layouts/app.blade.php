@@ -25,8 +25,11 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Torna alla Home
+                <a class="navbar-brand" href="{{ route('home') }}">
+                    Torna alla Home pubblica
+                </a>
+                <a class="navbar-brand" href="{{ route('admin.posts.index') }}">
+                    Vai alla Index
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
