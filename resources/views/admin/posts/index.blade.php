@@ -23,7 +23,9 @@
                                         <th scope="row">{{ $post->id }}</th>
 
                                         <td>{{ $post->title }}</td>
-                                        <td>{{ $post->content }}</td>
+                                        <td><a class="btn btn-danger"
+                                                href="{{ route('admin.posts.show', $post) }}">Show</a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
