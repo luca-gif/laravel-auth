@@ -15,11 +15,13 @@
                         <label for="title">Titolo</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror"
                             value="{{ old('title') }}" name="title" id="title" placeholder="Title">
+                        <p class="invalid-feedback" id="error-title"></p>
                     </div>
                     <div class="form-group">
                         <label for="content">Descrizione</label>
                         <textarea name="content" class="form-control @error('title') is-invalid @enderror" id="content" cols="50"
                             rows="10">{{ old('content') }}</textarea>
+                        <p class="invalid-feedback" id="error-content"></p>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
