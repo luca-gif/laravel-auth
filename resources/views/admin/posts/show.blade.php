@@ -9,7 +9,7 @@
                     <h3>{{ $post->title }}</h3>
                     <p>{{ $post->content }}</p>
                 </div>
-                <a class="btn btn-dark m-2" href="{{ route('admin.posts.index') }}">Back</a>
+                <a class="btn btn-primary m-2" href="{{ route('admin.posts.index') }}">Back</a>
             </div>
         </div>
 
