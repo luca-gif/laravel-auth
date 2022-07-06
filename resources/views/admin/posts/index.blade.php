@@ -13,7 +13,7 @@
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Title</th>
-                                    <th scope="col">Content</th>
+                                    <th scope="col">Buttons</th>
 
                                 </tr>
                             </thead>
@@ -27,8 +27,14 @@
                                             <a class="btn btn-danger"
                                                 href="{{ route('admin.posts.show', $post) }}">Show</a>
 
-                                            <a class="btn btn-info" href="{{ route('admin.posts.edit', $post) }}">Edit</a>
+                                            <a class="btn btn-warning"
+                                                href="{{ route('admin.posts.edit', $post) }}">Edit</a>
 
+                                            <form action="{{ route('admin.posts.destroy', $post) }}" method="POST">
+                                                @method('DELETE')
+                                                @csrf
+                                                <button type="submit" class="btn btn-dark"> Delete</button>
+                                            </form>
                                         </td>
 
                                     </tr>
