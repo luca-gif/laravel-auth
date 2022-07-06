@@ -23,9 +23,14 @@
                                         <th scope="row">{{ $post->id }}</th>
 
                                         <td>{{ $post->title }}</td>
-                                        <td><a class="btn btn-danger"
+                                        <td>
+                                            <a class="btn btn-danger"
                                                 href="{{ route('admin.posts.show', $post) }}">Show</a>
+
+                                            <a class="btn btn-info" href="{{ route('admin.posts.edit', $post) }}">Edit</a>
+
                                         </td>
+
                                     </tr>
                                 @endforeach
                             </tbody>

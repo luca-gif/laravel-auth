@@ -33,6 +33,10 @@
                     <a class="navbar-brand" href="{{ route('admin.posts.index') }}">
                         Vai alla Index
                     </a>
+
+                    <a class="navbar-brand" href="{{ route('admin.posts.create') }}">
+                        Crea un nuovo post!
+                    </a>
                 @endauth
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
