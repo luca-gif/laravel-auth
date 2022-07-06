@@ -24,7 +24,20 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|min:3|max:255',
+            'content' => 'required|min:3|max:255'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Il Titolo è obbligatorio',
+            'title.min' => 'Lunghezza min :min caratteri',
+            'title.max' => 'Lunghezza max :max caratteri',
+            'content.required' => 'Aggiungi un messaggio',
+            'content.min' => 'Lunghezza min :min caratteri',
+            'content.max' => 'Lunghezza max :max caratteri'
         ];
     }
 }
