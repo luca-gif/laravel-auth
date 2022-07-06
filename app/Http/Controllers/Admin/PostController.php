@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('id', 'desc')->paginate(5);
 
         return view('admin.posts.index', compact('posts'));
     }
@@ -42,7 +42,7 @@ class PostController extends Controller
     {
         $content = $request->all();
         $new_post = new Post();
-        $new_post->slug = Str::slug($new_post->title, '-');
+        $content['slug'] = Post::slugGenerator($content['title']);
         $new_post->fill($content);
         $new_post->save();
         return redirect()->route('admin.posts.show', $new_post);

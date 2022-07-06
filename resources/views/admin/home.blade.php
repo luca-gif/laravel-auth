@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        <h2>Sei loggato!</h2>
+                        <h5>Sei loggato!</h5>
                     </div>
                 </div>
             </div>
